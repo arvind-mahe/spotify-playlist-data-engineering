@@ -1,0 +1,15 @@
+Spotify JSON
+    ↓
+PySpark Ingestion
+    ↓
+Bronze Parquet
+    ↓
+Silver Normalized Tables
+    ↓
+Gold Analytics Tables
+    ↓
+AWS S3
+    ↓
+Athena
+    ↓
+SQL Analytics
