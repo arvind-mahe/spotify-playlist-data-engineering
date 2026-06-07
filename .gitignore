@@ -27,3 +27,5 @@ derby.log
 
 # Logs
 logs/*.log
+
+echo "*:Zone.Identifier" >> .gitignore
