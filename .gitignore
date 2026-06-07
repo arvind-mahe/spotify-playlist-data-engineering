@@ -28,4 +28,5 @@ derby.log
 # Logs
 logs/*.log
 
-echo "*:Zone.Identifier" >> .gitignore
+echo "*:Zone.Identifier" >> .gitignoreaws/
+awscliv2.zip
