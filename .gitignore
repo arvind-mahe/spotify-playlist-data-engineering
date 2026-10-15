@@ -30,3 +30,14 @@ logs/*.log
 
 echo "*:Zone.Identifier" >> .gitignoreaws/
 awscliv2.zip
+
+# Linux virtual environments
+.venv_linux/
+.venv_airflow/
+
+# DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# Airflow local files
+airflow_home/
