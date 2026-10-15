@@ -1,0 +1,709 @@
+[0m21:05:41.609886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8CDA7230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8A9D07D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8F7AB9D0>]}
+
+
+============================== 21:05:41.624479 | faca5a24-fbb0-46ae-8304-12e4fbdfbab8 ==============================
+[0m21:05:41.624479 [info ] [MainThread]: Running with dbt=1.12.6
+[0m21:05:41.625073 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'dbt_project\\logs'}
+[0m21:05:41.639183 [info ] [MainThread]: dbt version: 1.12.6
+[0m21:05:41.639517 [info ] [MainThread]: python version: 3.14.0
+[0m21:05:41.639784 [info ] [MainThread]: python path: C:\Users\10211\Downloads\Spotify_IBM_Day1_Ready\.venv\Scripts\python.exe
+[0m21:05:41.640037 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m21:05:41.798985 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m21:05:41.799487 [info ] [MainThread]: Using profiles.yml file at dbt_project\profiles.yml
+[0m21:05:41.799740 [info ] [MainThread]: Using dbt_project.yml file at dbt_project\dbt_project.yml
+[0m21:05:41.825321 [info ] [MainThread]: adapter type: duckdb
+[0m21:05:41.825672 [info ] [MainThread]: adapter version: 1.11.0
+[0m21:05:41.894034 [info ] [MainThread]: Configuration:
+[0m21:05:41.894533 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:05:41.894901 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:05:41.895136 [info ] [MainThread]: Required dependencies:
+[0m21:05:41.895360 [debug] [MainThread]: Executing "git --help"
+[0m21:05:41.938821 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:05:41.939135 [debug] [MainThread]: STDERR: "b''"
+[0m21:05:41.939355 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:05:41.939558 [info ] [MainThread]: Connection:
+[0m21:05:41.939742 [info ] [MainThread]:   database: spotify_analytics
+[0m21:05:41.939900 [info ] [MainThread]:   schema: main
+[0m21:05:41.940050 [info ] [MainThread]:   path: spotify_analytics.duckdb
+[0m21:05:41.940200 [info ] [MainThread]:   config_options: None
+[0m21:05:41.940345 [info ] [MainThread]:   extensions: None
+[0m21:05:41.940508 [info ] [MainThread]:   settings: {}
+[0m21:05:41.940797 [info ] [MainThread]:   external_root: .
+[0m21:05:41.941010 [info ] [MainThread]:   use_credential_provider: None
+[0m21:05:41.941170 [info ] [MainThread]:   attach: None
+[0m21:05:41.941396 [info ] [MainThread]:   filesystems: None
+[0m21:05:41.941605 [info ] [MainThread]:   remote: None
+[0m21:05:41.941799 [info ] [MainThread]:   plugins: None
+[0m21:05:41.942004 [info ] [MainThread]:   disable_transactions: False
+[0m21:05:41.942376 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m21:05:42.086165 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m21:05:46.460808 [debug] [MainThread]: Using duckdb connection "debug"
+[0m21:05:46.461060 [debug] [MainThread]: On debug: select 1 as id
+[0m21:05:46.461226 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:05:46.474265 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m21:05:46.474913 [debug] [MainThread]: On debug: Close
+[0m21:05:46.475193 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:05:46.475454 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:05:46.476042 [debug] [MainThread]: Command `dbt debug` succeeded at 21:05:46.475958 after 5.05 seconds
+[0m21:05:46.476233 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:05:46.476412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8FD7EC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8FF59250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C8FE5F790>]}
+[0m21:05:46.476658 [debug] [MainThread]: Flushing usage events
+[0m21:05:47.243169 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:30:40.994151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6eaa21190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6eb03e540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ea5f1d00>]}
+
+
+============================== 22:30:41.006999 | fb2e62fe-4669-4d7f-8fcd-b903fb1cc4ed ==============================
+[0m22:30:41.006999 [info ] [MainThread]: Running with dbt=1.12.6
+[0m22:30:41.008783 [debug] [MainThread]: running dbt with arguments {'log_path': 'dbt_project/logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'quiet': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'target_path': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'no_print': 'None', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True'}
+[0m22:30:41.211893 [info ] [MainThread]: dbt version: 1.12.6
+[0m22:30:41.212927 [info ] [MainThread]: python version: 3.12.3
+[0m22:30:41.213541 [info ] [MainThread]: python path: /mnt/c/Users/10211/Downloads/Spotify_IBM_Day1_Ready/Spotify_IBM_Day1_Ready/.venv_linux/bin/python
+[0m22:30:41.214254 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m22:30:42.334730 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m22:30:42.344946 [info ] [MainThread]: Using profiles.yml file at dbt_project/profiles.yml
+[0m22:30:42.351248 [info ] [MainThread]: Using dbt_project.yml file at dbt_project/dbt_project.yml
+[0m22:30:42.411920 [info ] [MainThread]: adapter type: duckdb
+[0m22:30:42.413576 [info ] [MainThread]: adapter version: 1.11.0
+[0m22:30:42.504485 [info ] [MainThread]: Configuration:
+[0m22:30:42.509875 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:30:42.514412 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:30:42.525084 [info ] [MainThread]: Required dependencies:
+[0m22:30:42.540485 [debug] [MainThread]: Executing "git --help"
+[0m22:30:42.560392 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:30:42.570624 [debug] [MainThread]: STDERR: "b''"
+[0m22:30:42.574228 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:30:42.576795 [info ] [MainThread]: Connection:
+[0m22:30:42.578310 [info ] [MainThread]:   database: spotify_analytics
+[0m22:30:42.579604 [info ] [MainThread]:   schema: main
+[0m22:30:42.581912 [info ] [MainThread]:   path: spotify_analytics.duckdb
+[0m22:30:42.584097 [info ] [MainThread]:   config_options: None
+[0m22:30:42.586080 [info ] [MainThread]:   extensions: None
+[0m22:30:42.588414 [info ] [MainThread]:   settings: {}
+[0m22:30:42.590386 [info ] [MainThread]:   external_root: .
+[0m22:30:42.592375 [info ] [MainThread]:   use_credential_provider: None
+[0m22:30:42.594557 [info ] [MainThread]:   attach: None
+[0m22:30:42.596702 [info ] [MainThread]:   filesystems: None
+[0m22:30:42.598749 [info ] [MainThread]:   remote: None
+[0m22:30:42.600705 [info ] [MainThread]:   plugins: None
+[0m22:30:42.602433 [info ] [MainThread]:   disable_transactions: False
+[0m22:30:42.608137 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m22:30:50.070708 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m22:30:53.288031 [debug] [MainThread]: Using duckdb connection "debug"
+[0m22:30:53.292710 [debug] [MainThread]: On debug: select 1 as id
+[0m22:30:53.294867 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:30:53.534964 [debug] [MainThread]: SQL status: OK in 0.240 seconds
+[0m22:30:53.543397 [debug] [MainThread]: On debug: Close
+[0m22:30:53.547065 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:30:53.550794 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:30:53.561433 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 12.636833, "process_in_blocks": "85272", "process_kernel_time": 0.853163, "process_mem_max_rss": "223288", "process_out_blocks": "0", "process_user_time": 1.504503}
+[0m22:30:53.573028 [debug] [MainThread]: Command `dbt debug` succeeded at 22:30:53.572763 after 12.65 seconds
+[0m22:30:53.576470 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:30:53.578967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6eaa22f00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ea0d08c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ea526ba0>]}
+[0m22:30:53.582081 [debug] [MainThread]: Flushing usage events
+[0m22:30:55.022845 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:31:16.543529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f709932f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7098cebb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7098ce9a60>]}
+
+
+============================== 22:31:16.549871 | 9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28 ==============================
+[0m22:31:16.549871 [info ] [MainThread]: Running with dbt=1.12.6
+[0m22:31:16.551091 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'invocation_command': 'dbt build --project-dir dbt_project --profiles-dir dbt_project', 'indirect_selection': 'eager', 'profiles_dir': 'dbt_project', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'debug': 'False', 'write_json': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True', 'introspect': 'True', 'no_print': 'None', 'log_path': 'dbt_project/logs', 'warn_error': 'None'}
+[0m22:31:18.254166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7097f47920>]}
+[0m22:31:18.297637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f70996be120>]}
+[0m22:31:18.425705 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m22:31:28.856118 [debug] [MainThread]: checksum: 8c157e5feec22b603fa7cc00c24b670663ef8db1397ebe28be073d4bae26c639, vars: {}, profile: spotify_analytics, target: dev, version: 1.12.6
+[0m22:31:28.863146 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:31:28.864302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7083f01880>]}
+[0m22:31:31.460899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f705bb0aba0>]}
+[0m22:31:31.547224 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project/target/manifest.json
+[0m22:31:31.595890 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project/target/semantic_manifest.json
+[0m22:31:31.934427 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project/target/osi_document.json
+[0m22:31:32.158642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703b60da90>]}
+[0m22:31:32.161339 [info ] [MainThread]: Found 3 models, 8 data tests, 500 macros
+[0m22:31:32.166520 [info ] [MainThread]: 
+[0m22:31:32.178133 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m22:31:32.183143 [info ] [MainThread]: 
+[0m22:31:32.187909 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:31:32.197639 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_spotify_analytics'
+[0m22:31:35.310339 [debug] [ThreadPool]: Using duckdb connection "list_spotify_analytics"
+[0m22:31:35.311102 [debug] [ThreadPool]: On list_spotify_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "connection_name": "list_spotify_analytics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"spotify_analytics"'
+    
+  
+  
+[0m22:31:35.311668 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:31:35.362848 [debug] [ThreadPool]: SQL status: OK in 0.051 seconds
+[0m22:31:35.364308 [debug] [ThreadPool]: On list_spotify_analytics: Close
+[0m22:31:35.366882 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_spotify_analytics, now create_spotify_analytics_main)
+[0m22:31:35.367729 [debug] [ThreadPool]: Creating schema "database: "spotify_analytics"
+schema: "main"
+"
+[0m22:31:35.372109 [debug] [ThreadPool]: Using duckdb connection "create_spotify_analytics_main"
+[0m22:31:35.373228 [debug] [ThreadPool]: On create_spotify_analytics_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "connection_name": "create_spotify_analytics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='spotify_analytics'
+        and type != 'duckdb'
+    
+  
+[0m22:31:35.373874 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:31:35.375774 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m22:31:35.376831 [debug] [ThreadPool]: Using duckdb connection "create_spotify_analytics_main"
+[0m22:31:35.377523 [debug] [ThreadPool]: On create_spotify_analytics_main: BEGIN
+[0m22:31:35.378320 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:31:35.379020 [debug] [ThreadPool]: Using duckdb connection "create_spotify_analytics_main"
+[0m22:31:35.379546 [debug] [ThreadPool]: On create_spotify_analytics_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "connection_name": "create_spotify_analytics_main"} */
+
+    
+    
+        create schema if not exists "spotify_analytics"."main"
+    
+[0m22:31:35.380361 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:31:35.381318 [debug] [ThreadPool]: On create_spotify_analytics_main: COMMIT
+[0m22:31:35.382062 [debug] [ThreadPool]: Using duckdb connection "create_spotify_analytics_main"
+[0m22:31:35.382593 [debug] [ThreadPool]: On create_spotify_analytics_main: COMMIT
+[0m22:31:35.383347 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:31:35.384032 [debug] [ThreadPool]: On create_spotify_analytics_main: Close
+[0m22:31:35.385132 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_spotify_analytics_main, now list_spotify_analytics_main)
+[0m22:31:35.388133 [debug] [ThreadPool]: Using duckdb connection "list_spotify_analytics_main"
+[0m22:31:35.392035 [debug] [ThreadPool]: On list_spotify_analytics_main: BEGIN
+[0m22:31:35.392757 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:31:35.393593 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:31:35.394266 [debug] [ThreadPool]: Using duckdb connection "list_spotify_analytics_main"
+[0m22:31:35.394760 [debug] [ThreadPool]: On list_spotify_analytics_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "connection_name": "list_spotify_analytics_main"} */
+select
+      'spotify_analytics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'spotify_analytics'
+  
+[0m22:31:35.401839 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m22:31:35.402887 [debug] [ThreadPool]: On list_spotify_analytics_main: ROLLBACK
+[0m22:31:35.404676 [debug] [ThreadPool]: On list_spotify_analytics_main: Close
+[0m22:31:35.405555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703b9ea9f0>]}
+[0m22:31:35.406319 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:31:35.406836 [debug] [MainThread]: On master: BEGIN
+[0m22:31:35.407302 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:31:35.408091 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:31:35.408748 [debug] [MainThread]: On master: COMMIT
+[0m22:31:35.409272 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:31:35.409823 [debug] [MainThread]: On master: COMMIT
+[0m22:31:35.410545 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:31:35.411095 [debug] [MainThread]: On master: Close
+[0m22:31:35.424633 [debug] [Thread-1 (]: Began running node model.spotify_analytics.stg_playlist_tracks
+[0m22:31:35.425015 [debug] [Thread-2 (]: Began running node model.spotify_analytics.stg_tracks
+[0m22:31:35.425966 [info ] [Thread-1 (]: 1 of 11 START sql view model main.stg_playlist_tracks .......................... [RUN]
+[0m22:31:35.427526 [info ] [Thread-2 (]: 2 of 11 START sql view model main.stg_tracks ................................... [RUN]
+[0m22:31:35.428768 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_spotify_analytics_main, now model.spotify_analytics.stg_playlist_tracks)
+[0m22:31:35.429956 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.spotify_analytics.stg_tracks'
+[0m22:31:35.430947 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.stg_playlist_tracks
+[0m22:31:35.432060 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.stg_tracks
+[0m22:31:35.436730 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.439601 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.stg_tracks"
+[0m22:31:35.453958 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.stg_tracks
+[0m22:31:35.476522 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.stg_tracks"
+[0m22:31:35.485008 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.stg_playlist_tracks
+[0m22:31:35.489506 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.506706 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.stg_tracks"
+[0m22:31:35.509666 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: BEGIN
+[0m22:31:35.512049 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:31:35.514934 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.517105 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m22:31:35.525526 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: BEGIN
+[0m22:31:35.530424 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.stg_tracks"
+[0m22:31:35.532581 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:31:35.534622 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+  
+  create view "spotify_analytics"."main"."stg_tracks__dbt_tmp" as (
+    select track_id, track_name, artist_id, artist_name, album_id, album_name
+from read_parquet('data/silver/tracks/*.parquet')
+where track_id is not null
+  );
+
+[0m22:31:35.537514 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m22:31:35.540505 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.542543 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_playlist_tracks"} */
+
+  
+  create view "spotify_analytics"."main"."stg_playlist_tracks__dbt_tmp" as (
+    select playlist_id, track_id, position
+from read_parquet('data/silver/playlist_tracks/*.parquet')
+where playlist_id is not null and track_id is not null
+  );
+
+[0m22:31:35.586922 [debug] [Thread-2 (]: SQL status: OK in 0.048 seconds
+[0m22:31:35.596797 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.stg_tracks"
+[0m22:31:35.597465 [debug] [Thread-1 (]: SQL status: OK in 0.053 seconds
+[0m22:31:35.599220 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+alter view "spotify_analytics"."main"."stg_tracks__dbt_tmp" rename to "stg_tracks"
+[0m22:31:35.603889 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.606957 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:31:35.608372 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_playlist_tracks"} */
+alter view "spotify_analytics"."main"."stg_playlist_tracks__dbt_tmp" rename to "stg_playlist_tracks"
+[0m22:31:35.620801 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: COMMIT
+[0m22:31:35.622097 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:31:35.623120 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.stg_tracks"
+[0m22:31:35.624671 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: COMMIT
+[0m22:31:35.625734 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: COMMIT
+[0m22:31:35.626828 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.629058 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: COMMIT
+[0m22:31:35.635785 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m22:31:35.639293 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.stg_tracks"
+[0m22:31:35.639555 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m22:31:35.640026 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+      drop view if exists "spotify_analytics"."main"."stg_tracks__dbt_backup" cascade
+    
+[0m22:31:35.678697 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_analytics.stg_playlist_tracks"
+[0m22:31:35.681478 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:31:35.684080 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_playlist_tracks"} */
+
+      drop view if exists "spotify_analytics"."main"."stg_playlist_tracks__dbt_backup" cascade
+    
+[0m22:31:35.687217 [debug] [Thread-2 (]: On model.spotify_analytics.stg_tracks: Close
+[0m22:31:35.691378 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:31:35.694788 [debug] [Thread-1 (]: On model.spotify_analytics.stg_playlist_tracks: Close
+[0m22:31:35.699072 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703aa9a810>]}
+[0m22:31:35.699296 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703aa9b6e0>]}
+[0m22:31:35.700040 [info ] [Thread-2 (]: 2 of 11 OK created sql view model main.stg_tracks .............................. [[32mOK[0m in 0.26s]
+[0m22:31:35.701000 [info ] [Thread-1 (]: 1 of 11 OK created sql view model main.stg_playlist_tracks ..................... [[32mOK[0m in 0.27s]
+[0m22:31:35.701723 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.stg_tracks
+[0m22:31:35.702547 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.stg_playlist_tracks
+[0m22:31:35.703469 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m22:31:35.703944 [debug] [Thread-1 (]: Began running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m22:31:35.704833 [info ] [Thread-2 (]: 3 of 11 START test not_null_stg_tracks_track_id ................................ [RUN]
+[0m22:31:35.705597 [info ] [Thread-1 (]: 4 of 11 START test unique_stg_tracks_track_id .................................. [RUN]
+[0m22:31:35.706258 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.stg_tracks, now test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a)
+[0m22:31:35.707098 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.stg_playlist_tracks, now test.spotify_analytics.unique_stg_tracks_track_id.29686655df)
+[0m22:31:35.707855 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m22:31:35.708586 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m22:31:35.716157 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m22:31:35.720854 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m22:31:35.732967 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m22:31:35.739689 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m22:31:35.747514 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m22:31:35.749163 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m22:31:35.767130 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m22:31:35.769255 [debug] [Thread-1 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: BEGIN
+[0m22:31:35.771281 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:31:35.771731 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m22:31:35.774014 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:31:35.775474 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: BEGIN
+[0m22:31:35.777434 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m22:31:35.779292 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:31:35.781767 [debug] [Thread-1 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    track_id as unique_field,
+    count(*) as n_records
+
+from "spotify_analytics"."main"."stg_tracks"
+where track_id is not null
+group by track_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:35.783830 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m22:31:35.786077 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m22:31:35.787375 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from "spotify_analytics"."main"."stg_tracks"
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:35.893991 [debug] [Thread-2 (]: SQL status: OK in 0.105 seconds
+[0m22:31:35.898544 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: ROLLBACK
+[0m22:31:35.903489 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: Close
+[0m22:31:35.905933 [info ] [Thread-2 (]: 3 of 11 PASS not_null_stg_tracks_track_id ...................................... [[32mPASS[0m in 0.20s]
+[0m22:31:35.907886 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m22:31:35.909297 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72
+[0m22:31:35.910529 [info ] [Thread-2 (]: 5 of 11 START test not_null_stg_playlist_tracks_playlist_id .................... [RUN]
+[0m22:31:35.911718 [debug] [Thread-1 (]: SQL status: OK in 0.127 seconds
+[0m22:31:35.912383 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a, now test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72)
+[0m22:31:35.919944 [debug] [Thread-1 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: ROLLBACK
+[0m22:31:35.921325 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72
+[0m22:31:35.923154 [debug] [Thread-1 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: Close
+[0m22:31:35.927776 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72"
+[0m22:31:35.931779 [info ] [Thread-1 (]: 4 of 11 PASS unique_stg_tracks_track_id ........................................ [[32mPASS[0m in 0.22s]
+[0m22:31:35.934153 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m22:31:35.935922 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2
+[0m22:31:35.937336 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_playlist_tracks_track_id ....................... [RUN]
+[0m22:31:35.938372 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.unique_stg_tracks_track_id.29686655df, now test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2)
+[0m22:31:35.939902 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2
+[0m22:31:35.944936 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2"
+[0m22:31:35.957841 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72
+[0m22:31:35.959860 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72"
+[0m22:31:35.960167 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2
+[0m22:31:35.965077 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2"
+[0m22:31:35.976636 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72"
+[0m22:31:35.982369 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72: BEGIN
+[0m22:31:35.984296 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:31:35.986600 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2"
+[0m22:31:35.988071 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m22:31:35.990031 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2: BEGIN
+[0m22:31:35.991795 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72"
+[0m22:31:35.993041 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:31:35.995329 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select playlist_id
+from "spotify_analytics"."main"."stg_playlist_tracks"
+where playlist_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:35.998537 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m22:31:36.001240 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2"
+[0m22:31:36.002760 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from "spotify_analytics"."main"."stg_playlist_tracks"
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:36.045172 [debug] [Thread-2 (]: SQL status: OK in 0.045 seconds
+[0m22:31:36.047424 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72: ROLLBACK
+[0m22:31:36.048924 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72: Close
+[0m22:31:36.050243 [info ] [Thread-2 (]: 5 of 11 PASS not_null_stg_playlist_tracks_playlist_id .......................... [[32mPASS[0m in 0.14s]
+[0m22:31:36.051444 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72
+[0m22:31:36.052879 [debug] [Thread-1 (]: SQL status: OK in 0.048 seconds
+[0m22:31:36.054544 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2: ROLLBACK
+[0m22:31:36.055665 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2: Close
+[0m22:31:36.056916 [info ] [Thread-1 (]: 6 of 11 PASS not_null_stg_playlist_tracks_track_id ............................. [[32mPASS[0m in 0.12s]
+[0m22:31:36.057775 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2
+[0m22:31:36.059028 [debug] [Thread-2 (]: Began running node model.spotify_analytics.top_tracks
+[0m22:31:36.059956 [info ] [Thread-2 (]: 7 of 11 START sql table model main.top_tracks .................................. [RUN]
+[0m22:31:36.060836 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_stg_playlist_tracks_playlist_id.ecc5586f72, now model.spotify_analytics.top_tracks)
+[0m22:31:36.061657 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.top_tracks
+[0m22:31:36.063424 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.top_tracks"
+[0m22:31:36.071219 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.top_tracks
+[0m22:31:36.095699 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.top_tracks"
+[0m22:31:36.120026 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.top_tracks"
+[0m22:31:36.120878 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: BEGIN
+[0m22:31:36.121794 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:31:36.122884 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:31:36.123737 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.top_tracks"
+[0m22:31:36.128744 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.top_tracks"} */
+
+    
+
+    create  table
+      "spotify_analytics"."main"."top_tracks__dbt_tmp"
+  
+    
+    as (
+      with counts as (
+    select track_id, count(distinct playlist_id) as playlist_count,
+           count(*) as total_appearances
+    from "spotify_analytics"."main"."stg_playlist_tracks"
+    group by track_id
+)
+select c.track_id, t.track_name, t.artist_name,
+       c.playlist_count, c.total_appearances
+from counts c
+left join "spotify_analytics"."main"."stg_tracks" t on c.track_id = t.track_id
+    );
+    
+  
+[0m22:31:36.498785 [debug] [Thread-2 (]: SQL status: OK in 0.367 seconds
+[0m22:31:36.503207 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.top_tracks"
+[0m22:31:36.504674 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.top_tracks"} */
+alter table "spotify_analytics"."main"."top_tracks__dbt_tmp" rename to "top_tracks"
+[0m22:31:36.507185 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:31:36.511752 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: COMMIT
+[0m22:31:36.513069 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.top_tracks"
+[0m22:31:36.515030 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: COMMIT
+[0m22:31:36.646029 [debug] [Thread-2 (]: SQL status: OK in 0.130 seconds
+[0m22:31:36.651135 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_analytics.top_tracks"
+[0m22:31:36.653516 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.top_tracks"} */
+
+      drop table if exists "spotify_analytics"."main"."top_tracks__dbt_backup" cascade
+    
+[0m22:31:36.659329 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:31:36.664818 [debug] [Thread-2 (]: On model.spotify_analytics.top_tracks: Close
+[0m22:31:36.672590 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c0fe15e-bcbb-4055-9a5e-4ea55afa1d28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703b8d2450>]}
+[0m22:31:36.677124 [info ] [Thread-2 (]: 7 of 11 OK created sql table model main.top_tracks ............................. [[32mOK[0m in 0.61s]
+[0m22:31:36.681608 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.top_tracks
+[0m22:31:36.685642 [debug] [Thread-1 (]: Began running node test.spotify_analytics.assert_counts_valid
+[0m22:31:36.686277 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0
+[0m22:31:36.688741 [info ] [Thread-1 (]: 8 of 11 START test assert_counts_valid ......................................... [RUN]
+[0m22:31:36.691584 [info ] [Thread-2 (]: 9 of 11 START test not_null_top_tracks_playlist_count .......................... [RUN]
+[0m22:31:36.697422 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_stg_playlist_tracks_track_id.9cd908efd2, now test.spotify_analytics.assert_counts_valid)
+[0m22:31:36.701653 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.top_tracks, now test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0)
+[0m22:31:36.704313 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.assert_counts_valid
+[0m22:31:36.707818 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0
+[0m22:31:36.713749 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.assert_counts_valid"
+[0m22:31:36.728013 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0"
+[0m22:31:36.754606 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0
+[0m22:31:36.759290 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.assert_counts_valid
+[0m22:31:36.764375 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0"
+[0m22:31:36.769926 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.assert_counts_valid"
+[0m22:31:36.791167 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.assert_counts_valid"
+[0m22:31:36.792703 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0"
+[0m22:31:36.793960 [debug] [Thread-1 (]: On test.spotify_analytics.assert_counts_valid: BEGIN
+[0m22:31:36.795917 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0: BEGIN
+[0m22:31:36.798012 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:31:36.800266 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:31:36.803450 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m22:31:36.805555 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m22:31:36.807154 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.assert_counts_valid"
+[0m22:31:36.809502 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0"
+[0m22:31:36.812112 [debug] [Thread-1 (]: On test.spotify_analytics.assert_counts_valid: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.assert_counts_valid"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select * from "spotify_analytics"."main"."top_tracks"
+where playlist_count < 1 or total_appearances < playlist_count
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:36.814778 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select playlist_count
+from "spotify_analytics"."main"."top_tracks"
+where playlist_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:36.821627 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:31:36.826395 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0: ROLLBACK
+[0m22:31:36.828794 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m22:31:36.830039 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0: Close
+[0m22:31:36.832928 [debug] [Thread-1 (]: On test.spotify_analytics.assert_counts_valid: ROLLBACK
+[0m22:31:36.834918 [info ] [Thread-2 (]: 9 of 11 PASS not_null_top_tracks_playlist_count ................................ [[32mPASS[0m in 0.13s]
+[0m22:31:36.836975 [debug] [Thread-1 (]: On test.spotify_analytics.assert_counts_valid: Close
+[0m22:31:36.838754 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0
+[0m22:31:36.841566 [info ] [Thread-1 (]: 8 of 11 PASS assert_counts_valid ............................................... [[32mPASS[0m in 0.14s]
+[0m22:31:36.843276 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78
+[0m22:31:36.845723 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.assert_counts_valid
+[0m22:31:36.848785 [info ] [Thread-2 (]: 10 of 11 START test not_null_top_tracks_track_id ............................... [RUN]
+[0m22:31:36.851236 [debug] [Thread-1 (]: Began running node test.spotify_analytics.unique_top_tracks_track_id.865b43a659
+[0m22:31:36.853829 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_top_tracks_playlist_count.d320c8f5c0, now test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78)
+[0m22:31:36.856216 [info ] [Thread-1 (]: 11 of 11 START test unique_top_tracks_track_id ................................. [RUN]
+[0m22:31:36.859064 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78
+[0m22:31:36.861086 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.assert_counts_valid, now test.spotify_analytics.unique_top_tracks_track_id.865b43a659)
+[0m22:31:36.872737 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78"
+[0m22:31:36.876325 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.unique_top_tracks_track_id.865b43a659
+[0m22:31:36.902902 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.unique_top_tracks_track_id.865b43a659"
+[0m22:31:36.918162 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78
+[0m22:31:36.921267 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78"
+[0m22:31:36.922384 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.unique_top_tracks_track_id.865b43a659
+[0m22:31:36.925677 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.unique_top_tracks_track_id.865b43a659"
+[0m22:31:36.931753 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78"
+[0m22:31:36.934877 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78: BEGIN
+[0m22:31:36.938286 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.unique_top_tracks_track_id.865b43a659"
+[0m22:31:36.938867 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:31:36.940395 [debug] [Thread-1 (]: On test.spotify_analytics.unique_top_tracks_track_id.865b43a659: BEGIN
+[0m22:31:36.942522 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m22:31:36.943346 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:31:36.945231 [debug] [Thread-2 (]: Using duckdb connection "test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78"
+[0m22:31:36.947027 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m22:31:36.947758 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from "spotify_analytics"."main"."top_tracks"
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:36.948836 [debug] [Thread-1 (]: Using duckdb connection "test.spotify_analytics.unique_top_tracks_track_id.865b43a659"
+[0m22:31:36.952420 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:31:36.954956 [debug] [Thread-1 (]: On test.spotify_analytics.unique_top_tracks_track_id.865b43a659: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_top_tracks_track_id.865b43a659"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    track_id as unique_field,
+    count(*) as n_records
+
+from "spotify_analytics"."main"."top_tracks"
+where track_id is not null
+group by track_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:31:36.958926 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78: ROLLBACK
+[0m22:31:36.962375 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78: Close
+[0m22:31:36.964399 [info ] [Thread-2 (]: 10 of 11 PASS not_null_top_tracks_track_id ..................................... [[32mPASS[0m in 0.11s]
+[0m22:31:36.964884 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m22:31:36.965995 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78
+[0m22:31:36.967745 [debug] [Thread-1 (]: On test.spotify_analytics.unique_top_tracks_track_id.865b43a659: ROLLBACK
+[0m22:31:36.970045 [debug] [Thread-1 (]: On test.spotify_analytics.unique_top_tracks_track_id.865b43a659: Close
+[0m22:31:36.971989 [info ] [Thread-1 (]: 11 of 11 PASS unique_top_tracks_track_id ....................................... [[32mPASS[0m in 0.11s]
+[0m22:31:36.974094 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.unique_top_tracks_track_id.865b43a659
+[0m22:31:36.981739 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:31:36.982799 [debug] [MainThread]: On master: BEGIN
+[0m22:31:36.983499 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:31:36.984495 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:31:36.985276 [debug] [MainThread]: On master: COMMIT
+[0m22:31:36.988623 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:31:36.990167 [debug] [MainThread]: On master: COMMIT
+[0m22:31:36.992304 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:31:36.994094 [debug] [MainThread]: On master: Close
+[0m22:31:36.995894 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:31:36.998055 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_top_tracks_track_id.865b43a659' was properly closed.
+[0m22:31:37.000542 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_top_tracks_track_id.ecf923ce78' was properly closed.
+[0m22:31:37.002883 [info ] [MainThread]: 
+[0m22:31:37.005383 [info ] [MainThread]: Finished running 1 table model, 8 data tests, 2 view models in 0 hours 0 minutes and 4.82 seconds (4.82s).
+[0m22:31:37.011855 [debug] [MainThread]: Command end result
+[0m22:31:37.074504 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project/target/manifest.json
+[0m22:31:37.096442 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project/target/semantic_manifest.json
+[0m22:31:37.116784 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project/target/osi_document.json
+[0m22:31:37.127877 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project/target/run_results.json
+[0m22:31:37.129101 [info ] [MainThread]: 
+[0m22:31:37.130147 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:31:37.131243 [info ] [MainThread]: 
+[0m22:31:37.132429 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=11
+[0m22:31:37.136654 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 20.680574, "process_in_blocks": "86640", "process_kernel_time": 1.344168, "process_mem_max_rss": "684572", "process_out_blocks": "0", "process_user_time": 3.182515}
+[0m22:31:37.138395 [debug] [MainThread]: Command `dbt build` succeeded at 22:31:37.138316 after 20.68 seconds
+[0m22:31:37.139623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f709c713380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f70992da120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f703b8aa0f0>]}
+[0m22:31:37.140813 [debug] [MainThread]: Flushing usage events
+[0m22:31:37.624843 [debug] [MainThread]: An error was encountered while trying to flush usage events

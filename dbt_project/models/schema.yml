@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: stg_tracks
+    description: Unique catalog of Spotify tracks from the PySpark Silver layer.
+    columns:
+      - name: track_id
+        data_tests: [not_null, unique]
+  - name: stg_playlist_tracks
+    description: One track occurrence per playlist and playlist position.
+    columns:
+      - name: track_id
+        data_tests: [not_null]
+      - name: playlist_id
+        data_tests: [not_null]
+  - name: top_tracks
+    description: Track-level counts of playlists and appearances.
+    columns:
+      - name: track_id
+        data_tests: [not_null, unique]
+      - name: playlist_count
+        data_tests: [not_null]
