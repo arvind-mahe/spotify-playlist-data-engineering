@@ -41,3 +41,7 @@ awscliv2.zip
 
 # Airflow local files
 airflow_home/
+
+# dbt generated artifacts
+dbt_project/target/
+dbt_project/logs/
