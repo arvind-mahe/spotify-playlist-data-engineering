@@ -1,0 +1,12 @@
+STORAGE PROOF - Spotify Million Playlist pipeline
+Generated : 2026-10-17 17:41:21 UTC
+Host      : LAPTOP-A3RHEAQ4
+Git commit: 2461a72
+
+Raw input : data/raw/mpd.slice.0-999.json
+  bytes   : 34119368
+  sha256  : 319870615e804c0f6d7766cf06eb0f707034704e809b605b47fab5990e0d3da8
+
+Layer                 Bytes    Files         MB
+Raw JSON           34119368        1      32.54
+Bronze              3921458        5       3.74
